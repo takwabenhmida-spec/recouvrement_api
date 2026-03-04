@@ -10,27 +10,36 @@ namespace RecouvrementAPI.Models
     {
         [Key]
         [Column("id_client")]
-        public int IdClient { get; set; } // Clé primaire
+        public int IdClient { get; set; }
 
         [Column("id_agence")]
-        public int? IdAgence { get; set; } // Clé étrangère vers l'agence
+        public int IdAgence { get; set; }
 
         [Required]
         [Column("nom")]
-        public string Nom { get; set; } // Nom du client
+        public string Nom { get; set; }
 
         [Required]
         [Column("prenom")]
-        public string Prenom { get; set; } // Prénom du client
+        public string Prenom { get; set; }
+
+        [Column("telephone")]
+        public string Telephone { get; set; }
+        // Numéro de téléphone pour envoi SMS du token
+
+        [Column("email")]
+        public string Email { get; set; }
+        // Email pour envoi du lien token
 
         [Column("token_acces")]
-        public string TokenAcces { get; set; } 
-        // Token unique pour accéder au formulaire sans login (sécurité)
+        public string TokenAcces { get; set; }
+        // Token UUID unique → généré avec UUID() dans MySQL
+        
 
-        public Agence Agence { get; set; } 
-        // Navigation vers l'agence pour récupérer la ville
+        // Navigation vers l'agence (ville, nom agence)
+        public Agence Agence { get; set; }
 
-        public ICollection<DossierRecouvrement> Dossiers { get; set; } 
         // Navigation vers les dossiers du client
+        public ICollection<DossierRecouvrement> Dossiers { get; set; }
     }
 }

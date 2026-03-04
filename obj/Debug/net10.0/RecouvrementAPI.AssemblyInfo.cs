@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RecouvrementAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45f825e197d9a87fc28e70557141eb6b68d5edf8")]
 [assembly: System.Reflection.AssemblyProductAttribute("RecouvrementAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RecouvrementAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

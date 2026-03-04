@@ -33,6 +33,9 @@ namespace RecouvrementAPI.Models
         [Column("date_creation")]
         public DateTime DateCreation { get; set; } 
         // AJOUT : date à laquelle le dossier a été créé
+        [Column("type_emprunt")]
+        public string TypeEmprunt { get; set; } 
+
 
         public Client Client { get; set; } // Navigation vers client
 
